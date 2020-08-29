@@ -53,7 +53,7 @@ class Consumer internal constructor(uri: URI, options: Options = Options()) {
                     Message.Type.PING -> connectionMonitor.recordPing()
                     Message.Type.CONFIRMATION -> subscriptions.notifyConnected(identifier!!)
                     Message.Type.REJECTION -> subscriptions.reject(identifier!!)
-                    Message.Type.MESSAGE -> subscriptions.notifyReceived(identifier!!, body)
+                    Message.Type.MESSAGE -> subscriptions.notifyReceived(identifier!!, jsonString)
                 }
             }
         }
