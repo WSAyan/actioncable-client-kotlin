@@ -23,7 +23,7 @@ repositories {
 }
 
 dependencies {
-    implementation ''
+    implementation 'com.github.WSAyan:actioncable-client-kotlin:1.0.0'
 }
 ```
 
